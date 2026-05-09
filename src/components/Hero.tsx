@@ -11,7 +11,11 @@ const FLOW_IMAGES = [
   "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000"
 ];
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  onInquiryClick: () => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const flowContainerRef = useRef<HTMLDivElement>(null);
   const layer1Ref = useRef<HTMLDivElement>(null);
@@ -159,7 +163,10 @@ export const Hero: React.FC = () => {
           <button className="px-12 py-5 bg-apple-blue text-white font-bold rounded-2xl hover:bg-apple-blue/90 transition-all duration-300 shadow-xl shadow-apple-blue/20 active:scale-95 w-full sm:w-auto">
             Discover Portfolio
           </button>
-          <button className="px-12 py-5 glass-panel-light text-apple-text-primary font-bold rounded-2xl hover:bg-white transition-all duration-300 shadow-md active:scale-95 w-full sm:w-auto">
+          <button 
+            onClick={onInquiryClick}
+            className="px-12 py-5 glass-panel-light text-apple-text-primary font-bold rounded-2xl hover:bg-white transition-all duration-300 shadow-md active:scale-95 w-full sm:w-auto"
+          >
             Private Consultation
           </button>
         </motion.div>

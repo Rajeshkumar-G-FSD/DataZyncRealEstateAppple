@@ -10,9 +10,13 @@ import { PropertyGrid } from './components/PropertyGrid';
 import { AgentList } from './components/AgentList';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
+import { InquiryModal } from './components/InquiryModal';
+import { Chatbot } from './components/Chatbot';
 import { motion, useScroll, useSpring } from 'motion/react';
+import React, { useState } from 'react';
 
 export default function App() {
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -28,10 +32,10 @@ export default function App() {
         style={{ scaleX }}
       />
 
-      <Navbar />
+      <Navbar onInquiryClick={() => setIsInquiryOpen(true)} />
       
       <main className="overflow-x-hidden">
-        <Hero />
+        <Hero onInquiryClick={() => setIsInquiryOpen(true)} />
         
         <div id="properties">
           <PropertyGrid />
@@ -49,6 +53,13 @@ export default function App() {
       </main>
 
       <Footer />
+
+      <InquiryModal 
+        isOpen={isInquiryOpen} 
+        onClose={() => setIsInquiryOpen(false)} 
+      />
+
+      <Chatbot />
 
       {/* Decorative Overlays - subtle top/bottom fade for depth */}
       <div className="fixed inset-0 pointer-events-none z-50">

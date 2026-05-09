@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-8">
         <div className="md:col-span-1">
           <div className="text-xl md:text-2xl font-bold tracking-tight text-apple-text-primary mb-8">
-            Apex <span className="font-light text-apple-blue">Realty</span>
+            DataZync <span className="font-light text-apple-blue">Properties</span>
           </div>
           <p className="text-[13px] font-medium leading-relaxed max-w-xs transition-colors hover:text-apple-text-primary">
             Global leaders in high-end residential real estate, dedicated to the most discerning clientele.
@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto mt-20 pt-10 border-t border-apple-border flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-medium">
-        <p>© 2026 Apex Realty Private Office. All Rights Reserved.</p>
+        <p>© 2026 DataZync Properties Private Office. All Rights Reserved.</p>
         <div className="flex gap-8">
           <a href="#" className="hover:text-apple-blue transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-apple-blue transition-colors">Cookie Settings</a>

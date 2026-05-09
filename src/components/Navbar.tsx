@@ -3,7 +3,11 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../lib/utils';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  onInquiryClick: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ onInquiryClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -32,7 +36,7 @@ export const Navbar: React.FC = () => {
         {/* Logo */}
         <a href="/" className="group flex items-center gap-2">
           <span className="text-xl md:text-2xl font-bold tracking-tight text-apple-text-primary">
-            Apex <span className="font-light text-apple-blue">Realty</span>
+            DataZync <span className="font-light text-apple-blue">Properties</span>
           </span>
         </a>
 
@@ -49,7 +53,10 @@ export const Navbar: React.FC = () => {
             </li>
           ))}
           <li>
-            <button className="px-5 py-2 bg-apple-blue text-white text-[13px] font-medium rounded-full hover:bg-apple-blue/90 transition-all duration-300 shadow-sm active:scale-95">
+            <button 
+              onClick={onInquiryClick}
+              className="px-5 py-2 bg-apple-blue text-white text-[13px] font-medium rounded-full hover:bg-apple-blue/90 transition-all duration-300 shadow-sm active:scale-95"
+            >
               Inquire
             </button>
           </li>
@@ -86,7 +93,13 @@ export const Navbar: React.FC = () => {
                 </li>
               ))}
               <li>
-                <button className="w-full py-4 bg-apple-blue text-white rounded-2xl font-medium">
+                <button 
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    onInquiryClick();
+                  }}
+                  className="w-full py-4 bg-apple-blue text-white rounded-2xl font-medium"
+                >
                   Inquire Now
                 </button>
               </li>
