@@ -20,43 +20,43 @@ interface Property {
 const PROPERTIES: Property[] = [
   {
     id: 1,
-    title: "The Celestial Penthouse",
-    location: "Manhattan, NY",
-    price: "$24,500,000",
+    title: "DataZync Highcity",
+    location: "Gachibowli, Hyderabad",
+    price: "₹1.75 Cr onwards",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200",
-    beds: 5,
-    baths: 6.5,
-    area: "8,400 sq.ft"
+    beds: 3,
+    baths: 3,
+    area: "2,400 sq.ft"
   },
   {
     id: 2,
-    title: "Azure Marina Villa",
-    location: "Monte Carlo, ME",
-    price: "$18,200,000",
+    title: "Crystal Aspires",
+    location: "Kondapur, Hyderabad",
+    price: "₹85 Lakh onwards",
     image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1200",
-    beds: 4,
-    baths: 4,
-    area: "5,200 sq.ft"
+    beds: 2,
+    baths: 2,
+    area: "1,450 sq.ft"
   },
   {
     id: 3,
-    title: "Obsidian Desert Retreat",
-    location: "Joshua Tree, CA",
-    price: "$12,800,000",
+    title: "Emerald Meadows",
+    location: "Tellapur, Hyderabad",
+    price: "₹2.20 Cr onwards",
     image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&q=80&w=1200",
-    beds: 3,
-    baths: 3.5,
+    beds: 4,
+    baths: 4,
     area: "3,800 sq.ft"
   },
   {
     id: 4,
-    title: "Elysium Glass House",
-    location: "Lake Como, Italy",
-    price: "$32,000,000",
+    title: "The Sky Pavilion",
+    location: "Banjara Hills, Hyderabad",
+    price: "₹5.50 Cr onwards",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
-    beds: 6,
-    baths: 8,
-    area: "12,000 sq.ft"
+    beds: 5,
+    baths: 6,
+    area: "6,200 sq.ft"
   }
 ];
 
