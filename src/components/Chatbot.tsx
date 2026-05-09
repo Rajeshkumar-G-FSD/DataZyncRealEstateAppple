@@ -66,29 +66,29 @@ export const Chatbot: React.FC = () => {
           role: 'model',
           text: "We have project in the following location. Would you be interested?",
           id: Date.now().toString(),
-          options: ['Manhattan', 'London', 'Back To Main Menu']
+          options: ['Gachibowli', 'Tellapur', 'Back To Main Menu']
         });
         setIsLoading(false);
       }, 1000);
-    } else if (option === 'Manhattan' || option === 'London') {
+    } else if (option === 'Gachibowli' || option === 'Tellapur') {
       setTimeout(() => {
         addMessage({
           role: 'model',
-          text: "We currently offer this project type. Would you like to proceed?",
+          text: "We currently offer these property types. Which one interests you?",
           id: Date.now().toString(),
-          options: ['Apartment', 'Back to Main Menu']
+          options: ['Villa', 'Plots', 'Back to Main Menu']
         });
         setIsLoading(false);
       }, 1000);
-    } else if (option === 'Apartment') {
+    } else if (option === 'Villa' || option === 'Plots') {
       setTimeout(() => {
         addMessage({
           role: 'model',
-          text: "Great, the following are our project in your preferred location. Click to know more?",
+          text: `Excellent. Here are some featured ${option} projects in your preferred location:`,
           id: Date.now().toString(),
           options: [
-            'DataZync Aspires at Manhattan, 10 mins from Central Park',
-            'DataZync Highcity Outer Ring Road'
+            'DataZync Highcity at Gachibowli',
+            'Emerald Meadows in Tellapur'
           ]
         });
         setIsLoading(false);
@@ -97,7 +97,7 @@ export const Chatbot: React.FC = () => {
       setTimeout(() => {
         addMessage({
           role: 'model',
-          text: `${option} is located at premium prime district, 10 mins from city center`,
+          text: `${option} is located in a premium prime district, with excellent connectivity to the IT Hub and City Center.`,
           id: Date.now().toString()
         });
         addMessage({
